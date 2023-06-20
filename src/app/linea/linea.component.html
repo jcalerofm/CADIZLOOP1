@@ -1,0 +1,20 @@
+<div style="margin-left: 10px; margin-right: 10px; margin-top:10px">
+  <h2>Paradas de la Línea {{lineaDetails.codigo}}</h2>
+  <h3>Ruta: {{lineaDetails.nombre}}</h3>
+  <h5>Tipo: {{lineaDetails.modo}}</h5>
+  <br>
+  <app-mapa></app-mapa>
+  <br>
+
+  <ol>
+    <li *ngFor="let parada of paradas">
+      {{parada.nombre}}
+    </li>
+  </ol>
+  <br>
+  <button class="btn btn-primary" (click)="cambiarSentido()">Cambiar sentido</button>
+  <br>
+  <br>
+
+
+</div>
